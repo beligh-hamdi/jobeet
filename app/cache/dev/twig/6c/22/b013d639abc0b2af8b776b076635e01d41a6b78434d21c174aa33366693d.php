@@ -56,78 +56,78 @@ class __TwigTemplate_6c22b013d639abc0b2af8b776b076635e01d41a6b78434d21c174aa3336
     public function block_content($context, array $blocks = array())
     {
         // line 13
-        echo "    
-        <h1>";
+        echo "
+    <h1>";
         // line 14
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "company"), "html", null, true);
         echo "</h1>
-        <h2>";
+    <h2>";
         // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "location"), "html", null, true);
         echo "</h2>
-        <h3>
-            ";
+    <h3>
+        ";
         // line 17
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "position"), "html", null, true);
         echo "
-            <small> - ";
+        <small> - ";
         // line 18
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "type"), "html", null, true);
         echo "</small>
-        </h3>
- 
-        ";
+    </h3>
+
+    ";
         // line 21
         if ($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "logo")) {
             // line 22
-            echo "            <div class=\"logo\">
-                <a href=\"";
+            echo "        <div class=\"logo\">
+            <a href=\"";
             // line 23
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "url"), "html", null, true);
             echo "\">
-                    <img src=\"/uploads/jobs/";
+                <img src=\"/uploads/jobs/";
             // line 24
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "logo"), "html", null, true);
             echo "\"
-                        alt=\"";
+                     alt=\"";
             // line 25
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "company"), "html", null, true);
             echo " logo\" />
-                </a>
-            </div>
-        ";
+            </a>
+        </div>
+    ";
         }
         // line 29
-        echo " 
-        <div class=\"description\">
-            ";
+        echo "
+    <div class=\"description\">
+        ";
         // line 31
         echo nl2br(twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "description"), "html", null, true));
         echo "
-        </div>
- 
-        <h4>How to apply?</h4>
- 
-        <p class=\"how_to_apply\">";
+    </div>
+
+    <h4>How to apply?</h4>
+
+    <p class=\"how_to_apply\">";
         // line 36
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "howtoapply"), "html", null, true);
         echo "</p>
- 
-        <div class=\"meta\">
-            <small>posted on ";
+
+    <div class=\"meta\">
+        <small>posted on ";
         // line 39
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "createdat"), "m/d/Y"), "html", null, true);
         echo "</small>
-        </div>
- 
-        <div style=\"padding: 20px 0\">
-            <a href=\"";
+    </div>
+
+    <div style=\"padding: 20px 0\">
+        <a href=\"";
         // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
-                Edit
-            </a>
-        </div>
+            Edit
+        </a>
+    </div>
     </div>
 ";
     }

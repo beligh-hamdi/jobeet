@@ -7,16 +7,18 @@ class __TwigTemplate_6c22b013d639abc0b2af8b776b076635e01d41a6b78434d21c174aa3336
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("EnsJobeetBundle::layout.html.twig");
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "EnsJobeetBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,150 +27,147 @@ class __TwigTemplate_6c22b013d639abc0b2af8b776b076635e01d41a6b78434d21c174aa3336
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_title($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Job</h1>
+        echo "    Jobs in the ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "name"), "html", null, true);
+        echo " category
+";
+    }
 
-    <table class=\"record_properties\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
-        // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>";
-        // line 14
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "type"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Company</th>
-                <td>";
+    // line 7
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        // line 8
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/css/jobs.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+";
+    }
+
+    // line 12
+    public function block_content($context, array $blocks = array())
+    {
+        // line 13
+        echo "    <div class=\"category\">
+        <div class=\"feed\">
+            <a href=\"\">Feed
+            </a>
+        </div>
+        <h1>";
         // line 18
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "company"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Logo</th>
-                <td>";
-        // line 22
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "logo"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Url</th>
-                <td>";
-        // line 26
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "url"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Position</th>
-                <td>";
-        // line 30
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "position"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Location</th>
-                <td>";
-        // line 34
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "location"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>";
-        // line 38
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "description"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>How_to_apply</th>
-                <td>";
-        // line 42
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "howtoapply"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Token</th>
-                <td>";
-        // line 46
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "token"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Is_public</th>
-                <td>";
-        // line 50
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "ispublic"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Is_activated</th>
-                <td>";
-        // line 54
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "isactivated"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>";
-        // line 58
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "email"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Expires_at</th>
-                <td>";
-        // line 62
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "expiresat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>";
-        // line 66
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "createdat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Updated_at</th>
-                <td>";
-        // line 70
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "updatedat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-            </tr>
-        </tbody>
-    </table>
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "name"), "html", null, true);
+        echo "</h1>
+    </div>
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 77
-        echo $this->env->getExtension('routing')->getPath("ens_job");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 82
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id"))), "html", null, true);
-        echo "\">
-            Edit
-        </a>
-    </li>
-    <li>";
-        // line 86
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+    ";
+        // line 21
+        echo twig_include($this->env, $context, "EnsJobeetBundle:Job:list.html.twig", array("jobs" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "activejobs")));
+        echo "
+
+    ";
+        // line 23
+        if (((isset($context["last_page"]) ? $context["last_page"] : null) > 1)) {
+            // line 24
+            echo "        <div class=\"pagination\">
+            <a href=\"";
+            // line 25
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_category", array("slug" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "slug"), "page" => 1)), "html", null, true);
+            echo "\">
+                <img src=\"";
+            // line 26
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/images/first.png"), "html", null, true);
+            echo "\" alt=\"First page\" title=\"First page\" />
+            </a>
+
+            <a href=\"";
+            // line 29
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_category", array("slug" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "slug"), "page" => (isset($context["previous_page"]) ? $context["previous_page"] : null))), "html", null, true);
+            echo "\">
+                <img src=\"";
+            // line 30
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/images/previous.png"), "html", null, true);
+            echo "\" alt=\"Previous page\" title=\"Previous page\" />
+            </a>
+
+            ";
+            // line 33
+            $context['_parent'] = (array) $context;
+            $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["last_page"]) ? $context["last_page"] : null)));
+            foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
+                // line 34
+                echo "                ";
+                if (((isset($context["page"]) ? $context["page"] : null) == (isset($context["current_page"]) ? $context["current_page"] : null))) {
+                    // line 35
+                    echo "                    ";
+                    echo twig_escape_filter($this->env, (isset($context["page"]) ? $context["page"] : null), "html", null, true);
+                    echo "
+                ";
+                } else {
+                    // line 37
+                    echo "                    <a href=\"";
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_category", array("slug" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "slug"), "page" => (isset($context["page"]) ? $context["page"] : null))), "html", null, true);
+                    echo "\">";
+                    echo twig_escape_filter($this->env, (isset($context["page"]) ? $context["page"] : null), "html", null, true);
+                    echo "</a>
+                ";
+                }
+                // line 39
+                echo "            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 40
+            echo "
+            <a href=\"";
+            // line 41
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_category", array("slug" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "slug"), "page" => (isset($context["next_page"]) ? $context["next_page"] : null))), "html", null, true);
+            echo "\">
+                <img src=\"";
+            // line 42
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/images/next.png"), "html", null, true);
+            echo "\" alt=\"Next page\" title=\"Next page\" />
+            </a>
+
+            <a href=\"";
+            // line 45
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_category", array("slug" => $this->getAttribute((isset($context["category"]) ? $context["category"] : null), "slug"), "page" => (isset($context["last_page"]) ? $context["last_page"] : null))), "html", null, true);
+            echo "\">
+                <img src=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/images/last.png"), "html", null, true);
+            echo "\" alt=\"Last page\" title=\"Last page\" />
+            </a>
+        </div>
+    ";
+        }
+        // line 50
+        echo "
+    <div class=\"pagination_desc\">
+        <strong>";
+        // line 52
+        echo twig_escape_filter($this->env, (isset($context["total_jobs"]) ? $context["total_jobs"] : null), "html", null, true);
+        echo "</strong> jobs in this category
+
+        ";
+        // line 54
+        if (((isset($context["last_page"]) ? $context["last_page"] : null) > 1)) {
+            // line 55
+            echo "            - page <strong>";
+            echo twig_escape_filter($this->env, (isset($context["current_page"]) ? $context["current_page"] : null), "html", null, true);
+            echo "/";
+            echo twig_escape_filter($this->env, (isset($context["last_page"]) ? $context["last_page"] : null), "html", null, true);
+            echo "</strong>
+        ";
+        }
+        // line 57
+        echo "    </div>
 ";
     }
 
@@ -184,6 +183,6 @@ class __TwigTemplate_6c22b013d639abc0b2af8b776b076635e01d41a6b78434d21c174aa3336
 
     public function getDebugInfo()
     {
-        return array (  137 => 66,  81 => 34,  74 => 30,  165 => 64,  146 => 53,  83 => 35,  65 => 31,  58 => 29,  53 => 18,  23 => 1,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 151,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 122,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 106,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 98,  309 => 97,  305 => 95,  298 => 91,  294 => 90,  285 => 89,  283 => 88,  278 => 86,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 77,  229 => 73,  220 => 70,  214 => 69,  177 => 65,  169 => 86,  140 => 50,  132 => 51,  128 => 49,  111 => 42,  107 => 41,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  246 => 90,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 69,  159 => 61,  143 => 56,  135 => 53,  131 => 46,  119 => 44,  108 => 36,  102 => 46,  71 => 32,  67 => 26,  63 => 15,  59 => 6,  47 => 12,  38 => 6,  94 => 28,  89 => 20,  85 => 25,  79 => 34,  75 => 33,  68 => 14,  56 => 9,  50 => 10,  29 => 5,  87 => 36,  72 => 16,  55 => 15,  21 => 2,  26 => 6,  98 => 31,  93 => 28,  88 => 38,  78 => 21,  46 => 14,  27 => 4,  40 => 8,  44 => 11,  35 => 6,  31 => 4,  43 => 8,  41 => 7,  28 => 3,  201 => 92,  196 => 90,  183 => 82,  171 => 61,  166 => 71,  163 => 62,  158 => 59,  156 => 66,  151 => 63,  142 => 59,  138 => 54,  136 => 56,  123 => 58,  121 => 46,  117 => 44,  115 => 43,  105 => 40,  101 => 32,  91 => 37,  69 => 11,  66 => 15,  62 => 30,  49 => 14,  24 => 4,  32 => 4,  25 => 3,  22 => 2,  19 => 1,  209 => 82,  203 => 78,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 66,  176 => 64,  173 => 65,  168 => 72,  164 => 59,  162 => 82,  154 => 77,  149 => 51,  147 => 58,  144 => 70,  141 => 48,  133 => 55,  130 => 62,  125 => 45,  122 => 43,  116 => 54,  112 => 42,  109 => 50,  106 => 33,  103 => 40,  99 => 39,  95 => 42,  92 => 21,  86 => 28,  82 => 22,  80 => 19,  73 => 19,  64 => 10,  60 => 22,  57 => 11,  54 => 10,  51 => 14,  48 => 13,  45 => 8,  42 => 10,  39 => 10,  36 => 5,  33 => 6,  30 => 7,);
+        return array (  170 => 57,  160 => 54,  155 => 52,  134 => 42,  113 => 37,  104 => 34,  100 => 33,  84 => 26,  70 => 21,  76 => 13,  77 => 24,  74 => 19,  53 => 7,  186 => 62,  161 => 6,  127 => 40,  90 => 29,  37 => 4,  23 => 1,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 151,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 122,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 106,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 98,  309 => 97,  305 => 95,  298 => 91,  294 => 90,  285 => 89,  283 => 88,  278 => 86,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 77,  229 => 73,  220 => 70,  214 => 69,  177 => 65,  169 => 11,  140 => 45,  132 => 51,  128 => 49,  111 => 37,  107 => 35,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  246 => 90,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 14,  159 => 61,  143 => 56,  135 => 69,  131 => 52,  119 => 42,  108 => 36,  102 => 53,  71 => 19,  67 => 16,  63 => 15,  59 => 10,  47 => 9,  38 => 6,  94 => 30,  89 => 20,  85 => 25,  79 => 18,  75 => 23,  68 => 14,  56 => 9,  50 => 9,  29 => 2,  87 => 25,  72 => 18,  55 => 15,  21 => 2,  26 => 6,  98 => 31,  93 => 26,  88 => 6,  78 => 21,  46 => 7,  27 => 4,  40 => 7,  44 => 4,  35 => 10,  31 => 8,  43 => 8,  41 => 7,  28 => 3,  201 => 92,  196 => 90,  183 => 61,  171 => 61,  166 => 10,  163 => 62,  158 => 5,  156 => 66,  151 => 50,  142 => 59,  138 => 54,  136 => 56,  123 => 47,  121 => 39,  117 => 44,  115 => 43,  105 => 54,  101 => 32,  91 => 27,  69 => 25,  66 => 15,  62 => 23,  49 => 6,  24 => 4,  32 => 3,  25 => 3,  22 => 2,  19 => 1,  209 => 82,  203 => 78,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 66,  176 => 13,  173 => 65,  168 => 72,  164 => 59,  162 => 55,  154 => 58,  149 => 51,  147 => 58,  144 => 46,  141 => 48,  133 => 55,  130 => 41,  125 => 61,  122 => 43,  116 => 41,  112 => 56,  109 => 55,  106 => 33,  103 => 32,  99 => 31,  95 => 28,  92 => 21,  86 => 24,  82 => 22,  80 => 25,  73 => 19,  64 => 18,  60 => 14,  57 => 13,  54 => 12,  51 => 14,  48 => 9,  45 => 8,  42 => 10,  39 => 3,  36 => 5,  33 => 4,  30 => 3,);
     }
 }

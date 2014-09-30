@@ -7,16 +7,16 @@ class __TwigTemplate_0b068542aa98a50c145cb04c382a44caf004b9db013eee17e0cda575b77
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("EnsJobeetBundle::layout.html.twig");
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "EnsJobeetBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,10 +25,10 @@ class __TwigTemplate_0b068542aa98a50c145cb04c382a44caf004b9db013eee17e0cda575b77
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Job edit</h1>
+        echo "    <h1>Job edit</h1>
 
     ";
         // line 6

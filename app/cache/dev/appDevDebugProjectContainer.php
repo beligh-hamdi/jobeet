@@ -3573,6 +3573,7 @@ class appDevDebugProjectContainer extends Container
             'debug_redirects' => false,
             'use_assetic_controller' => true,
             'max_jobs_on_homepage' => 10,
+            'max_jobs_on_category' => 20,
             'controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
             'controller_name_converter.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerNameParser',
             'response_listener.class' => 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener',

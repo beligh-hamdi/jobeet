@@ -562,4 +562,48 @@ class Job extends \Ens\JobeetBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pr
         return parent::setUpdatedAtValue();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getCompanySlug()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompanySlug', array());
+
+        return parent::getCompanySlug();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPositionSlug()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPositionSlug', array());
+
+        return parent::getPositionSlug();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLocationSlug()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocationSlug', array());
+
+        return parent::getLocationSlug();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExpiresAtValue()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAtValue', array());
+
+        return parent::setExpiresAtValue();
+    }
+
 }

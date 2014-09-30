@@ -80,7 +80,9 @@
   'EnsJobeetBundle:Default:index.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Default/index.html.twig',
   'EnsJobeetBundle:Job:edit.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/edit.html.twig',
   'EnsJobeetBundle:Job:index.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/index.html.twig',
+  'EnsJobeetBundle:Job:list.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/list.html.twig',
   'EnsJobeetBundle:Job:new.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/new.html.twig',
   'EnsJobeetBundle:Job:show.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/show.html.twig',
+  'EnsJobeetBundle::layout.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/layout.html.twig',
   '::base.html.twig' => 'C:/Program Files/Apache Software Foundation/Apache2.2/htdocs/jobeet/app/Resources\\views/base.html.twig',
 );
