@@ -1060,6 +1060,7 @@ class appProdProjectContainer extends Container
         $instance->setTranslator($this->get('translator'));
         $instance->setTranslationDomain('validators');
         $instance->addXmlMappings(array(0 => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml'));
+        $instance->addYamlMappings(array(0 => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle\\Resources\\config\\validation.yml'));
         $instance->enableAnnotationMapping($this->get('annotation_reader'));
         $instance->addMethodMapping('loadValidatorMetadata');
         $instance->setApiVersion(3);

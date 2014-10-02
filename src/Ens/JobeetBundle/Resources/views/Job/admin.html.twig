@@ -1,0 +1,14 @@
+<div id="job_actions">
+    <h3>Admin</h3>
+    <ul>
+        {% if not job.isActivated %}
+            <li><a href="{{ path('ens_job_edit', { 'token': job.token }) }}">Edit</a></li>
+            <li>
+                <form action="{{ path('ens_job_publish', { 'token': job.token }) }}" method="post">
+                    {{ form_widget(publish_form) }}
+                    <button type="submit">Publish</button>
+                </form>
+            </li>
+        {% endif %}
+    </ul>
+</div>

@@ -77,6 +77,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views/Collector/explain.html.twig',
+  'EnsJobeetBundle:Category:show.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Category/show.html.twig',
   'EnsJobeetBundle:Default:index.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Default/index.html.twig',
   'EnsJobeetBundle:Job:edit.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/edit.html.twig',
   'EnsJobeetBundle:Job:index.html.twig' => 'C:\\Program Files\\Apache Software Foundation\\Apache2.2\\htdocs\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Job/index.html.twig',

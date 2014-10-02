@@ -1444,6 +1444,11 @@
           <argument>C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\jobeet\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/config/validation.xml</argument>
         </argument>
       </call>
+      <call method="addYamlMappings">
+        <argument type="collection">
+          <argument>C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\jobeet\src\Ens\JobeetBundle\Resources\config\validation.yml</argument>
+        </argument>
+      </call>
       <call method="enableAnnotationMapping">
         <argument type="service" id="annotation_reader"/>
       </call>
